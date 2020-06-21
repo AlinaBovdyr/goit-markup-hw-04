@@ -155,7 +155,21 @@ a {
 
 /* Герой */
 .hero {
-  background-color: rgba(47, 48, 58, 0.8);
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  outline: 1px solid black;
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url(../images/Header.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 
   text-align: center;
 }
@@ -207,11 +221,30 @@ a {
   width: calc((100% - 3 * 30px) / 4);
 }
 
-.feature-image {
+.feature-item::before {
+  content: '';
+  display: block;
+  height: 120px;
   margin-bottom: 30px;
-  padding: 25px 100px;
-
   background-color: var(--secondary-background-color);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon-antenna::before {
+  background-image: url(../images/icons/antenna.svg);
+}
+
+.icon-clock::before {
+  background-image: url(../images/icons/clock.svg);
+}
+
+.icon-diagram::before {
+  background-image: url(../images/icons/diagram.svg);
+}
+
+.icon-astronaut::before {
+  background-image: url(../images/icons/astronaut.svg);
 }
 
 .features .primary-title {
@@ -321,12 +354,30 @@ a {
 }
 
 .social-links {
-  display: inline-block;
-  padding: 12px;
+  display: block;
   width: 44px;
   height: 44px;
+
+  background-repeat: no-repeat;
+  background-position: center;
   border: 1px solid transparent;
   border-radius: 50%;
+}
+
+.icon-instagram {
+  background-image: url(../images/icons/instagram.svg);
+}
+
+.icon-twitter {
+  background-image: url(../images/icons/twitter.svg);
+}
+
+.icon-facebook {
+  background-image: url(../images/icons/facebook.svg);
+}
+
+.icon-linkedin {
+  background-image: url(../images/icons/linkedin.svg);
 }
 
 .social-links:hover,
@@ -415,8 +466,23 @@ a {
 .social .social-links {
   margin-top: 0;
 
-  color: var(--contrast-title-color);
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social .icon-instagram {
+  background-image: url(../images/icons/instagram-white.svg);
+}
+
+.social .icon-twitter {
+  background-image: url(../images/icons/twitter-white.svg);
+}
+
+.social .icon-facebook {
+  background-image: url(../images/icons/facebook-white.svg);
+}
+
+.social .icon-linkedin {
+  background-image: url(../images/icons/linkedin-white.svg);
 }
 
 .social-links-list .social-links:hover,
