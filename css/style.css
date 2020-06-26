@@ -9,6 +9,7 @@
   --primary-title-color: #212121;
   --contrast-title-color: #ffffff;
   --secondary-background-color: #f5f4fa;
+  --icon-color: #afb1b8;
 }
 
 body {
@@ -210,30 +211,14 @@ a {
   width: calc((100% - 3 * 30px) / 4);
 }
 
-.feature-item::before {
-  content: '';
-  display: block;
-  height: 120px;
+.icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 30px;
+  width: 270px;
+  height: 120px;
   background-color: var(--secondary-background-color);
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.icon-antenna::before {
-  background-image: url(../images/icons/antenna.svg);
-}
-
-.icon-clock::before {
-  background-image: url(../images/icons/clock.svg);
-}
-
-.icon-diagram::before {
-  background-image: url(../images/icons/diagram.svg);
-}
-
-.icon-astronaut::before {
-  background-image: url(../images/icons/astronaut.svg);
 }
 
 .features .primary-title {
@@ -343,30 +328,17 @@ a {
 }
 
 .social-links {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
 
-  background-repeat: no-repeat;
-  background-position: center;
   border: 1px solid transparent;
   border-radius: 50%;
-}
 
-.icon-instagram {
-  background-image: url(../images/icons/instagram.svg);
-}
-
-.icon-twitter {
-  background-image: url(../images/icons/twitter.svg);
-}
-
-.icon-facebook {
-  background-image: url(../images/icons/facebook.svg);
-}
-
-.icon-linkedin {
-  background-image: url(../images/icons/linkedin.svg);
+  color: var(--icon-color);
+  fill: currentColor;
 }
 
 .social-links:hover,
@@ -375,26 +347,30 @@ a {
   background-color: var(--accent-color);
 }
 
-.team a {
-  color: inherit;
-}
-
 /* Постоянные клиенты */
 .clients-list {
   display: flex;
   justify-content: space-between;
 }
 
-.clients-item {
+.clients-icon {
   display: flex;
   justify-content: center;
   align-items: center;
 
   width: 170px;
   height: 90px;
+  color: var(--icon-color);
+  fill: currentColor;
 
-  border: 1px solid #afb1b8;
+  border: 1px solid var(--icon-color);
   border-radius: 4px;
+}
+
+.clients-icon:hover,
+.clients-icon:focus {
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
 }
 
 /* Подвал */
@@ -455,6 +431,7 @@ a {
 .social .social-links {
   margin-top: 0;
 
+  color: var(--contrast-title-color);
   background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -544,6 +521,8 @@ a {
 .button:focus {
   color: var(--contrast-title-color);
   background-color: var(--accent-color);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 3px 1px rgba(0, 0, 0, 0.1);
 }
 
 .cards-list {
@@ -558,6 +537,12 @@ a {
 
 .card:not(:nth-last-child(-n + 3)) {
   margin-bottom: 30px;
+}
+
+.card:hover,
+.card:focus {
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
 }
 
 .card img {
